@@ -1,7 +1,7 @@
 FROM centos:7
 RUN yum install -y rpmdevtools mock sudo man make postgresql-devel openldap compat-openldap openldap-clients openldap-servers openldap-servers-sql openldap-devel gnupg which autoconf automake bison gcc-c++ libffi-devel libtool readline-devel ruby sqlite-devel zlib-devel glibc-headers glibc-devel openssl-devel openssh-clients git nfs-utils mkisofs epel-release centos-release-scl&& \
     rpm --import http://download.fedoraproject.org/pub/epel/RPM-GPG-KEY-EPEL-7 && \
-    yum install -y python-pip llvm-toolset-7.0 botan botan-doc botan-devel cyrus-sasl cyrus-sasl-devel python-django-bash-completion python2-django python2-django-rest-framework python2-ruamel-ordereddict python2-ruamel-yaml python2-typing
+    yum install -y python-pip llvm-toolset-7.0 llvm-toolset-7-cmake botan botan-doc botan-devel cyrus-sasl cyrus-sasl-devel python-django-bash-completion python2-django python2-django-rest-framework python2-ruamel-ordereddict python2-ruamel-yaml python2-typing llvm-toolset-7-clang llvm-toolset-7-git-clang-format llvm-toolset-7-git-clang-format llvm-toolset-7-clang-tools-extra
 
 SHELL ["/bin/bash", "-lc"]
 CMD ["/bin/bash", "-l"]

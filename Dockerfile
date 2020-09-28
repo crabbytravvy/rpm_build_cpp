@@ -8,7 +8,7 @@ CMD ["/bin/bash", "-l"]
 
 RUN touch /.yarnrc && \
     chmod 777 /.yarnrc && \
-    echo -e "#!/bin/bash\nsource scl_source enable llvm-toolset-7.0 && /bin/bash" >/usr/local/bin/init.sh && \
+    echo -e "#!/bin/bash\nexport PATH=\"$PATH:/opt/rh/llvm-toolset-7/root/usr/bin/\"\nsource scl_source enable llvm-toolset-7.0 && /bin/bash" >/usr/local/bin/init.sh && \
     chmod 755 /usr/local/bin/init.sh
 
 RUN ln -s /usr/local/bin/init.sh / # backwards compat
